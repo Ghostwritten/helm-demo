@@ -7,8 +7,8 @@ Helm 图表使用模板方法来部署应用程序。模板为项目提供结构
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/236c924c74944ce0ae649ce954f9fa77.png)
 ##  2. 条件
 
- - 安装并配置了 Minikube 集群（请按照我们的指南[如何在 Ubuntu 上安装 Minikube](https://ghostwritten.blog.csdn.net/article/details/113527867)和[如何在 CentOS 上安装 Minikube](https://ghostwritten.blog.csdn.net/article/details/123796854)
- - 你需要懂得[Helm 安装](https://phoenixnap.com/kb/install-helm)和配置；
+ - 安装并配置Minikube 集群,如果你还没有部署minikube集群，请参阅[如何在 Ubuntu 上安装 Minikube](https://ghostwritten.blog.csdn.net/article/details/113527867)和[如何在 CentOS 上安装 Minikube](https://ghostwritten.blog.csdn.net/article/details/123796854)
+ - 你需要懂得[Helm 安装](https://phoenixnap.com/kb/install-helm)和配置
  - 你需要掌握基本[helm语法编写技巧](https://helm.sh/docs/howto/charts_tips_and_tricks/)
 
 ##  3. 应用
@@ -87,10 +87,11 @@ ghost   NodePort   10.97.232.158   <none>        80:30152/TCP   2m44s
 ```
 通过 `http://<nodeip>:31950` 访问到 `Ghost` ：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/8c06ef1764c543369de6876780be5c5b.png)
+
 清理 deployment
 
 ```bash
-$ delete -f ghost/
+$ kubectl delete -f ghost/
 deployment.apps "ghost" deleted
 service "ghost" deleted
 ```
@@ -1185,7 +1186,7 @@ helm install  hello-ghost  helm-demo/my-ghost
 ```
 
 
-✈<font color=	#FF4500 size=4 style="font-family:Courier New">推荐阅读：</font>
+✈<font color=	#FF4500 size=4 style="font-family:Courier New">参考阅读：</font>
 
  - [Helm Charts 开发完整示例](https://mp.weixin.qq.com/s/HRFrmvWYDdwjMzHn8sco5w)
  - [git 本地项目上传github或gitlab详解](https://ghostwritten.blog.csdn.net/article/details/105240194)
